@@ -1,0 +1,7 @@
+span {
+    border: 1px solid red;
+    word-break: break-all;//拆分单词
+}
+div{
+    border:1px solid  red;
+}
