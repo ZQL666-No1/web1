@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p class="we">
+            <h2>面向对象</h2>
+            <h1 id="k">
+h
+            </h1>
+            <h3 id="l">haha</h3>
+        </p>
+    </div>
+    <script>
+        //定义一个对象
+        var obj=new Object();
+        obj.name="lihua";
+        obj.age=18;
+        //用啥形式写的对象属性就用啥形式引用
+        obj["123"]=12341535; 
+         alert(obj["123"]);
+         //检查对象里是否含有某个属性；
+         //格式 "属性名" in 对象名；
+        console.log("test" in obj);//false
+        console.log("age" in obj);//true
+        console.log(obj.name);
+        document.write(obj.name);
+      document.getElementById("k").innerHTML= "age"in obj;
+      alert(obj.name);
+      //基本数据类型就是数值的比较
+      //对象（引用数据类型）储存在堆内存中，地址不一样
+    var obj1=new Object();
+    var obj2=new Object();
+    obj1.name="hello";
+    obj2.name="hello";
+        document.getElementById("l").innerHTML=obj1==obj2;
+    </script>
+</body>
+</html>
