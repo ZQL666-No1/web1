@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        background-color: rgb(223, 117, 117);
+        height: 300px;width: 300px;
+        color:white;
+        font-size: larger;
+    }
+</style>
+<body>
+  <div class="box">
+     <p id="ii"></p>
+  </div>
+    <script>
+        var a=[1,241,325,54,6,654,68,68,65,8,74];
+        var t=0;
+
+        for(var i=0;i<a.length;i++){
+            document.write(a[i]+" ");
+        }
+        
+        for(var j=0;j<a.length-1;j++){
+            for(var k=0;k<a.length-1-j;k++){
+              if(a[k]>a[k+1]){
+                t=a[k];
+                a[k]=a[k+1];
+                a[k+1]=t;
+              }
+            }
+        }
+        for(var m=0;m<a.length;m++){
+            document.write(a[m]+"  ");
+        }
+    </script>
+</body>
+</html>
