@@ -1,1 +1,31 @@
-123
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="index.css">
+<body>
+    <div  id="box1">
+
+    </div>
+   <div id="box2">
+
+   </div>
+   <br>
+   <br>
+   <br>
+   
+<input type="button" id="btn1" value="请点击我">
+<script>
+       var target = document.getElementById("btn1");
+        target.onclick = function () {
+            var leftValue = document.getElementById("box1").style.left;
+            leftValue = leftValue.replace("px", "");
+            leftValue = Number(leftValue) + 5;
+            document.getElementById("box1").style.left = leftValue + "px";
+    }
+    </script>
+</body>
+</html>
