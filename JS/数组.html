@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>数组练习</h1>
+
+    <ul>
+        <li id="id"></li>
+        <li id="h"></li>
+        <li id="f"></li>
+        <li id="k"></li>
+        <li id="o"></li>
+        <li id="m"></li>
+        <li id="ll"></li>
+        <li id="mm"></li>
+        <li id="oo"></li>
+    </ul>
+
+
+    <script>
+        var fruits = ["banana", "oragn", "apple", "mango"];
+        document.getElementById("id").innerHTML = fruits.toString();
+        document.getElementById("h").innerHTML = fruits.join("*&");
+        fruits.pop();//删除数组的最后一个元素
+        document.getElementById("f").innerHTML = fruits;
+        fruits.push("watermylen");//向数组中添加元素
+        document.getElementById("k").innerHTML = fruits;
+        var x = fruits.push();//返回数组长度
+        document.write("数组的长度为：" + x);
+        var y = fruits.shift();//返回移除的数组元素，shift方法为删除首个元素，降低其他元素的索引
+
+        document.getElementById("o").innerHTML = fruits;
+        fruits.unshift("hello");
+        var f = fruits.unshift();//unshift方法返回新数组的长度
+        document.write("新数组的长度为：" + f);
+
+        document.getElementById("m").innerHTML = fruits;
+        //向数组中追加元素，使用length方法
+        fruits.length("hello-world");
+        document.getElementById("ll").innerHTML = fruits;
+        delete (fruits[3]);
+        document.getElementById("mm").innerHTML=fruits;
+       
+       
+    </script>
+    
+    <script>
+     //拼接数组
+         var  my=["hrllo","mys","dsf"];
+        var  you=["dg","pig","kkd"];
+        var myo=my.concat(fruits);
+        document.getElementById("oo").innerHTML=myo;
+    </script>
+</body>
+
+</html>
