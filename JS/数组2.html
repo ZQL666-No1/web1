@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        color: goldenrod;
+    }
+</style>
+<body>
+    <ul>
+        <li id="a">#1</li>
+        <li id="b">#2</li>
+        <li id="c">#2</li>
+        <li id="d">#4</li>
+        <li id="e">#5</li>
+        <li id="f">#6</li>
+        <li id="g">#7</li>
+        <li id="h">#8</li>
+        <li id="i">#9</li>
+    </ul>
+    <script>
+        //数组的拼接
+        var mi = [21, 34, 346, 75, 68, 454, 355, 3, 68, 32, 4, 5];
+        var ni = [1, 213, 2345, 455, 246];
+        //连接数组
+        var my = mi.concat(ni);
+        //直接通过connect函数连接值
+        var nii = ni.concat("hello");
+        document.getElementById("a").innerHTML = my;
+        document.getElementById("b").innerHTML = nii;
+        var cm = ["mango", "orange", "apple", "water", "sajdfs"];
+        var cc = ["saf", "hello_world", "hello"];
+        //拼接数组，
+        var mm = cm.slice(2, 3, "Hellsing", "kkk");
+        document.getElementById("i").innerHTML = mm;
+    </script>
+   
+</body>
+
+</html>
