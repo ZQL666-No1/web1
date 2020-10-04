@@ -86,6 +86,28 @@
 
 
     </script>
+    <h4>最大值</h4>
+    <p><span id="dd"></span></p>
+    <script>
+        var ll = [21, 354, 547, 568, 875, 87, 94, 65, 7];
+        var max = ll[0];
+        for (var i = 0; i < ll.length - 1; i++) {
+            if (max < ll[i]) {
+                max = ll[i];
+            }
+        }
+        document.write(max);
+        function maxi(arr) {
+            var max = arr[0];
+            for (var i = 0; i < arr.length - 1; i++) {
+                if (max < arr[i]) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        document.getElementById("dd").innerHTML = maxi(ll);
+    </script>
 </body>
 
 </html>
