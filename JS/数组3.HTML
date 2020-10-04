@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    * {
+        color: crimson;
+        font-style: italic;
+    }
+</style>
+
+<body>
+    <script>
+        var yy = ["apple", "orange", "manggo", "livf"];
+        yy.sort();
+        //sort()函数按照字母顺序排序
+        document.write(yy);
+        yy.reverse();
+        //reverse()方法用于反转元素的顺序
+        document.write(yy);
+    </script>
+    <h1>数组排序</h1>
+    <p>单击按钮排序</p>
+    <button onclick="myFunction()">试一试</button>
+    <p id="do"></p>
+    <button onclick="youFunction()">试一试</button>
+    <p id="do1"></p>
+    <script>
+        var h = [23, 43, 43, 65, 3, 57, 234, 100];
+        document.getElementById("do").innerHTML = h;
+        function myFunction() {
+            h.sort(function (a, b) {
+                return a - b
+            });
+            document.getElementById("do").innerHTML = h
+        }
+
+    </script>
+    <script>
+        var a = [12, 34, 43, 656, 34, 4568, 876, 6, 7, 9, 100];
+        document.getElementById("do1").innerHTML = a;
+        function youFunction() {
+            a.sort(function (a, b) {
+                return b - a
+            });
+            document.getElementById("do1").innerHTML = a;
+        }
+        document.write(Math.random() * 100);
+    </script>
+    <h1>数组的最值</h1>
+    <p>
+        最小值是：<span id="dm"></span>
+    </p>
+    <p>最大值是：<span id="dd"></span></p>
+    <script>
+        //求数组的最值
+        var mm = [12, 23, 4563, 45, 46, 87, 985, 2122, 432, 211];
+        mm.sort(function (a, b) {
+            return a - b
+        });
+        document.getElementById("dm").innerHTML = mm[0];
+        document.getElementById("dd").innerHTML = mm[mm.length - 1];
+    </script>
+
+    <p>
+        用函数求最大值： <span id="jj"></span>
+    </p>
+    <p>
+        用函数求最小值： <span id="hh"></span>
+    </p>
+    <script>
+        var p = [12, 35, 436, 26, 86, 0, 34, 9995];
+        document.getElementById("jj").innerHTML = myArrayMax(p);
+        function myArrayMax(arr) {
+            return Math.max.apply(null, arr);
+        }
+        document.getElementById("hh").innerHTML = myArrayMin(p);
+        function myArrayMin(arr) {
+            return Math.min.apply(null, arr);
+        }
+
+
+    </script>
+</body>
+
+</html>
