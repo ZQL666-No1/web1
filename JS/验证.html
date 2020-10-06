@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" onsubmit="return my()" method="post">
+        用户名：<input type="text" id="txt">
+        密码：<input type="password" id="mima">
+        Email: <input type="text" id="email">
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        function my() {
+            var x = document.getElementById("txt").value;
+            var y = document.getElementById("mima").value;
+            var k = document.getElementById("email").value;
+            var atpos = k.indexOf("@");
+            var dotops = k.lastIndexOf(".");
+            if (x == null || x == "" || y == null || y == "") {
+                alert("请完整填写相关信息！")
+
+            } else if (atpos < 1 || dotops < atpos + 2 || dotops + 2 >= k.length) {
+                alter("请输入一个正确的邮箱地址！");
+                return false;
+
+            }
+        }
+    </script>
+</body>
+
+</html>
