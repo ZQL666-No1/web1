@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        用户名：
+        <input type="text" id="name">
+        密 码：
+        <input type="password " id="mima">
+
+        <input type="button" id="btn" onclick="demo()" value="按钮">
+
+    </form>
+    <script>
+        function demo() {
+            try {
+                var e = document.getElementById("name").value;
+                var m = document.getElementById("mima").value;
+                var ming = String(e);
+                var mimi = String(m);
+                if (ming == "" || mimi == "") {
+                    throw "请输入用户名和密码！";
+                } else if (ming.length > 7) {
+                    throw "请正确输入用户名！"
+                } else if (mimi.length < 6) {
+                    throw "请正确输入密码！"
+                } else {
+                    throw "输入正确！正在登陆中~~~"
+                }
+            } catch (err) {
+                alert(err);
+
+            }
+        }
+    </script>
+</body>
+
+</html>
