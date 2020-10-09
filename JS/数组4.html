@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="j"></p>
+    邮箱：
+    <input type="text" id="hi">
+    <input type="submit" value="提交" onclick="myFunction()">
+    <!-- <button type="button" onclick="myFunction()">提交</button> -->
+
+    <script>
+        var m = document.getElementById("hi").value;
+        document.getElementById("j").innerHTML = m;
+
+    </script>
+    <script>
+
+        function myFunction() {
+            var a = document.getElementsByName("hi").values;
+            if (a.indexOf("@") > -1 && a.indexOf("@") < a.indexOf(".")) {
+                alert("您输入的邮箱正确！");
+            } else {
+                alter("您输入的邮箱有误，请重新输入！！");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
