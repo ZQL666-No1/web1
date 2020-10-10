@@ -1,0 +1,22 @@
+.k{
+    width: 100px;height: 100px;
+    background-color: rgb(212, 47, 47);
+}
+.j{
+background-color: rgb(136, 96, 96);
+width: 100px;
+height: 100px;
+}
+.l{
+    background-color: rgb(39, 26, 26);
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+li{
+    background-color: rgb(32, 154, 190);
+    color: yellow;
+    display: block;
+    width: 100px;
+    height: 100px;
+}
