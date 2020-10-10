@@ -1,9 +1,15 @@
 .uname{
     background-color: rgb(200, 48, 48);
 }
+.if{
+background-color: rgb(216, 172, 172);
+font-size: large;
+}
 .right{
     background-color: rgb(46, 187, 128);
+    font-size: larger;
 }
 .wrong{
     background-color: rgb(101, 31, 214);
+    font-size: smaller;
 }
