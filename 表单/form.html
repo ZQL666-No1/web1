@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td {
+        background-color: rgb(196, 77, 77);
+        width: 100px;
+        height: 100px;
+        border: aqua, 10px, solid;
+        text-align: center;
+        color: white;
+    }
+
+    a {
+        color: yellow;
+        text-decoration: none;
+    }
+
+    .top {
+        height: 100px;
+        background-color: rgb(197, 159, 159);
+    }
+
+    .content {
+        background-color: rgb(209, 10, 10);
+        height: 600px;
+        margin: 0, auto;
+    }
+
+    .foot {
+        background-color: rgb(17, 13, 13);
+        height: 120px;
+    }
+</style>
+
+<body>
+    <div class="top"></div>
+    <div class="content">
+        <table width="300" height="300" border="1" cellspacing="0">
+            <tr>
+                <td colspan="3" id="kk1">L</td>
+
+            </tr>
+            <tr>
+                <td><button type="button" onclick="myFunction()">按钮1</button></td>
+                <td>
+                    <p id="kk">hello</p>
+                </td>
+                <td>
+                    <h1><a href="www.baidu.com">百度</a></h1>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="haha()">按钮2</button> </td>
+                <td> </td>
+                <td><a href="www.taobao.com"> 淘宝</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="foot"></div>
+
+
+    <script>
+        function myFunction() {
+            alert("你好，欢迎访问本网页！")
+        }
+        function haha() {
+            document.getElementById("kk1").innerHTML = "hi，ZQL!"
+            document.getElementById("kk").innerHTML = "你好！";
+        }
+    </script>
+</body>
+
+</html>
