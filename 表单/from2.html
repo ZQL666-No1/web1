@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* body {
+
+        background-image: url('e.jpg');
+        background-repeat: no-repeat;
+
+    } */
+
+    /* .biao {
+        height: 600px;
+    } */
+
+    /* #q {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+    }
+
+    #m {
+        position: absolute;
+        left: 110px;
+        top: 120px;
+    } */
+</style>
+
+<body>
+    <div class="biao">
+        <p id="q">
+            QQ:<input type="text" id="qq">
+        </p>
+        <p id="m">
+            密码: <input type="password" name="" id="mima">
+            <button type="submit" onclick="test()">登录</button>
+        </p>
+
+        <p class="hh">123</p>
+    </div>
+    <script>
+        function test() {
+            var tqq = /^[0-9]{6,10}$/;
+            var tqqmi = /^[0-9a-zA-Z-_]{6,16}$/;
+            var qq = document.querySelector("qq");
+            var mima = document.querySelector("mima");
+            if (tqq.test(qq.value) && (tqqmi.test(mima.value))) {
+                alert('登录成功');
+                // mima.nextElementSibling.innerHTML = "恭喜你登录成功";
+            } else {
+                alert('登录失败');
+            }
+        }
+    </script>
+</body>
+
+</html>
