@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <p>
+    <h1 id="ee"></h1>
+    <h1 id="gg"></h1>
+    <h1 id="g"></h1>
+    </p>
+    <script>
+        class men {
+            constructor() {
+                document.write("hello world!!!");
+            }
+        }
+        var me = new men();
+      
+        class teacher {
+
+            //创建构造方法
+            constructor(name, ke) {
+
+                this.name = name;
+                this.ke = ke;
+                document.getElementById("g").innerHTML = "我是教" + ke + "的老师" + "我叫" + name;
+                console.log("我是教" + ke + "的老师" + "我叫" + name);
+            }
+        }
+        var lk = new teacher("于晓辉", "WEB");
+        var lk = new teacher("12133", "nnf");
+        class stu {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            showme(song) {
+                console.log(this.name + "唱" + song);
+            }
+
+        }
+        var jj = new stu("刘德华", 18);
+        var hh = new stu("学友", 49);
+        console.log(jj);
+        console.log(hh);
+        jj.showme("哈哈哈");
+    </script>
+
+</body>
+
+</html>
