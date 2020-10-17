@@ -47,42 +47,52 @@
         <h1 id="l">hello world!!!</h1>
     </div>
     <div class="content">
-        <form action="">
+        <!-- 注释里的为通过表单提交数据 ，定义的isempty方法-->
+        <!-- 注释外的为通过button的onclick调用函数提交表单数据 -->
+        <!-- <form name="form1" action="" method="POST" onsubmit="return isempty()"> -->
+        <form>
             用户名：<input type="text" id="name">
             密码：<input type="password" id="mima">
-            <button type="button" onclick="yanzheng()">提交</button>
+            <!-- <button type="submit" onclick="">提交</button> -->
+            <button type=" button" onclick=" yanzheng() ">提交</button>
+
         </form>
     </div>
     <div class="foot"></div>
     <script>
+        // function isempty() {
+        //     for (var i = 0; i < document.form1.elements.length - 1; i++) {
+        //         if (document.form1.elements[i].value == "") {
+        //             alert("请输入相关内容！！！");
+        //             document.form1.elements[i].focus();
+        //             return false;
+        //         }
+        //     }
+        //     return true;
+        // }
         function yanzheng() {
             var n = document.querySelector("#name");
             var m = document.querySelector("#mima");
             var div = document.querySelector(".top");
             var tel = /^[\u4E00-\u9FA5A-Za-z0-9_]+$/;
-            var tel1 = /^[a-zA-Z0-9_-]{6,8}$/;
+            var tel1 = /^[a-zA-Z0-9_-]{6,12}$/;
+            //  while (true) {
+            if ((n.value == null || n.value == "") || (m.value == null || n.value == "")) {
+                alert("请填写相关内容！！");
+                n.focus();//将光标聚焦空表单
+                //  break;
+            }
             if (tel.test(n.value) && (tel1.test(m.value))) {
                 div.className = "right";
                 document.getElementById("l").innerHTML = "恭喜你输入正确！！！";
+                // break;
             } else {
                 div.className = "wrong";
                 document.getElementById("l").innerHTML = "请您正确输入！！！";
+                // break;
             }
         }
-
-        // class Person {
-        //     constructor(name, age) {
-        //         this.age = age;
-        //         this.name = name;
-        //     }
-        // }
-        // class stu extends Person {
-        //     constructor(name, id) {
-        //         super(name);
-        //         this.id = id;
-        //     }
-        // }
-
+     //   }
     </script>
 </body>
 
