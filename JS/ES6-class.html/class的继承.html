@@ -25,16 +25,16 @@
                 super(sname);//调用父类的contructor(sname);
                 this.firstname = firstname;//子类独有的属性
                 console.log("firstname是：" + firstname);
-
-                function showme() {
-                    document.write("hello world");
-                }
-
             }
+            showme() {
+                document.write("hello world" + this.sname + "来了" + "<br>");
+            }
+
         }
         var stu = new student("李白", "李华");
         var stu2 = new student("xiaowu ", "小吧");
-        showme();
+        stu.showme();
+        stu2.showme();
     </script>
 </body>
 
