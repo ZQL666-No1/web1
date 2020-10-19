@@ -16,9 +16,9 @@
     </form>
     <script>
         function my() {
-            var x = document.getElementById("txt").value;
-            var y = document.getElementById("mima").value;
-            var k = document.getElementById("email").value;
+            var x = document.querySelector("#txt").value;
+            var y = document.querySelector("#mima").value;
+            var k = document.querySelector("#email").value;
             var atpos = k.indexOf("@");
             var dotops = k.lastIndexOf(".");
             if (x == null || x == "" || y == null || y == "") {
@@ -28,6 +28,8 @@
                 alter("请输入一个正确的邮箱地址！");
                 return false;
 
+            } else {
+                alert("hello11");
             }
         }
     </script>
