@@ -76,23 +76,24 @@
             var div = document.querySelector(".top");
             var tel = /^[\u4E00-\u9FA5A-Za-z0-9_]+$/;
             var tel1 = /^[a-zA-Z0-9_-]{6,12}$/;
-            //  while (true) {
-            if ((n.value == null || n.value == "") || (m.value == null || n.value == "")) {
-                alert("请填写相关内容！！");
-                n.focus();//将光标聚焦空表单
-                //  break;
-            }
-            if (tel.test(n.value) && (tel1.test(m.value))) {
-                div.className = "right";
-                document.getElementById("l").innerHTML = "恭喜你输入正确！！！";
-                // break;
-            } else {
-                div.className = "wrong";
-                document.getElementById("l").innerHTML = "请您正确输入！！！";
-                // break;
+            while (true) {
+                if ((n.value == null || n.value == "") || (m.value == null || n.value == "")) {
+                    alert("请填写相关内容！！");
+                    n.focus();//将光标聚焦空表单
+                    break;
+                }
+                if (tel.test(n.value) && (tel1.test(m.value))) {
+                    div.className = "right";
+                    document.getElementById("l").innerHTML = "恭喜你输入正确！！！";
+                    return false;
+
+                } else {
+                    div.className = "wrong";
+                    document.getElementById("l").innerHTML = "请您正确输入！！！";
+                    return false;
+                }
             }
         }
-     //   }
     </script>
 </body>
 
