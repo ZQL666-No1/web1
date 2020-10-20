@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            console.log('页面已经加载完成');
+        }
+        function whichbtn(event) {
+            var btn = event.button;
+            if (btn == 2) {
+                alert('你点了鼠标右键！');
+            } else if (btn == 1) {
+                alert('你点了中间那个键！！');
+            } else if (btn == 0) {
+                alert('你点了鼠标左键！！');
+            } else {
+                alert('你点了' + btn + '键');
+            }
+        }
+    </script>
+</head>
+
+<body onmousedown="whichbtn(event)">
+    <p>
+    <h1>鼠标点击事件</h1>
+    </p>
+
+</body>
+
+</html>

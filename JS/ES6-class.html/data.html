@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .top {
+        height: 100px;
+        background-color: rgb(180, 149, 149);
+
+    }
+
+    .content {
+        height: 300px;
+        background-color: #fff;
+    }
+
+    .foot {
+        background-color: rgb(196, 228, 13);
+        height: 40px;
+    }
+
+    #hah {
+        background-color: #fff;
+    }
+
+    .wrong {
+
+        background-color: red;
+    }
+
+    .right {
+
+        background-color: darkgreen;
+    }
+</style>
+
+<body>
+    <div class="top">
+
+        用户名：<input type="text" class="name" onblur="yanzheng()">
+        <!-- 密码：<input type="password" class="mima"> -->
+        <!-- <input type="submit" value="提交" onclick="yanzheng()"> -->
+        <span id="hah">123</span>
+    </div>
+    <div class="content"></div>
+    <div class="foot"></div>
+    <script>
+        function yanzheng() {
+            var n = document.querySelector("#name");
+            var span = document.querySelector("#hah");
+            var tel = /^[\u4E00-\u9FA5A-Za-z0-9_]+$/;
+            // if (n.value == "" || n.value == null) {
+            //     alert("请填写相关内容！！！");
+            // }
+            if (tel.test(n.value)) {
+                span.innerHTML = "hello";
+            } else {
+                span.innerHTML = "sfn";
+            }
+        }
+    // mima.onblur = function yanzheng1() {
+    //     var m = document.querySelector("#mima");
+    //     var span = document.querySelector(".hah");
+    //     var tel1 = /^[a-zA-Z0-9_-]{6,12}$/;
+    //     if (m.value == "" || m.value == null) {
+    //         alert("请填写相关内容！！！");
+    //     }
+    //     if (tel1.test(m.value)) {
+    //         span.className = "right";
+    //     } else {
+    //         span.className = "wrong";
+    //     }
+    // }
+
+
+    </script>
+
+</body>
+
+</html>
