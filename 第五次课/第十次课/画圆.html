@@ -1,37 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .r1{
+       
+        .R{
+            background-color: pink;
+            border-radius: 500px;
+            width: 500px;
+            height: 500px;
+            border: 10px solid black;
+        }
+        .r1 {
+            float: left;
             border: 10px solid red;
-            width: 100px;
+            width: 200px;
             height: 100px;
             border-radius: 100px;
             background-color: black;
         }
-        .r2{
+
+        .r3 {
+            border: 10px solid red;
+            width: 200px;
+            height: 100px;
+            border-radius: 100px;
+            background-color: black;
+            float: right;
+        }
+
+        .r2 {
             background-color: blue;
             border: 10px solid black;
-            width: 400px;
-            height: 400px;
-            border-radius: 400px;
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
             color: aliceblue;
+            position: absolute;
+            top: 130px;
+            left: 150px;
         }
-        p{
+        .R1{
+            height: 100px;
+            width: 59px;
+            border-radius: 50px;
+            border: 10px solid blueviolet;
+            background-color: chartreuse;
+            position: absolute;
+            top:170px ;
+            left:170px;
+        }
+        .R2{
+            height: 100px;
+            width: 59px;
+            border-radius: 50px;
+            border: 10px solid blueviolet;
+            background-color: chartreuse;
+            position: absolute;
+            top:170px ;
+            left:260px;
+        }
+        .zui{
+            border: solid 10px blue;
+            position: absolute;
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            left: 200px;
+            top: 170px; 
+            height: 100px;
+            width: 200px;
+            background-color: bisque;
+            position: absolute;
+            left: 165px;
+            top: 350px;
+        } 
+        .nav{
+            width: 36px;
+            height: 89px;
+            background-color: brown;
+          float: left;
+          border: solid 2px white;
+        }
+        /* p{
             font-size: larger;
             position: absolute;
             color: crimson;
             top: 200px;
             left: 200px;
+        } */
+        #ii{
+            background-color: aliceblue;
+        }
+        #yy{
+            background-color: greenyellow;
+        }
+        #ya{
+            background-color: hotpink;
         }
     </style>
 </head>
+
 <body>
-    <!-- <div class="r1"></div> -->
-    <div class="r2"><p>王鹏是大哥</p>
-        </div>
+<div class="R">
+    <div class="r1"></div>
+    <div class="r3"></div>
+
+    <div class="r2"></div>
+    <div class="R1"></div>
+    <div class="R2"></div>
+    <div class="zui">
+        <div class="nav"></div>
+        <div class="nav" id="ii"></div>
+        <div class="nav" id="yy"></div>
+        <div class="nav" id="ya1"></div>
+        <div class="nav" id="ya"></div>
+       
+    </div>
+</div>
 </body>
+
 </html>
