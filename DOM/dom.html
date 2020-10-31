@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ff(){
+            //获得对象
+            var  m=document.getElementsByClassName("top");
+            //改变css属性
+            m[0].style.backgroundColor="blue";
+            m[0].style.width="400px";
+            m[0].style.height=400+"px";
+            m[0].style.color="red";
+            m[0].style.fontFamily="rome";
+        }
+        function my(){
+            var fc=document.getElementsByClassName("c1");
+            var fc1=document.getElementsByClassName("ridus");
+            var x,y,z;
+            x=Math.ceil((Math.random()*255));
+            y=Math.ceil((Math.random()*255));
+            z=Math.ceil((Math.random()*255));
+            fc[0].style.backgroundColor="rgb("+x+","+y+","+z+")";
+            fc1[0].style.backgroundColor="rgb("+(x-50)+","+(y+67)+","+(z+20)+")";
+        }
+
+    </script>
+    <style>
+    .top{
+        background-color:yellow;
+        width: 200px;height: 200px;
+        color: aliceblue;
+        float: left;
+    }
+    .c1{
+        background-color: chartreuse;
+        width: 300px;
+        height: 300px;
+        float: right;
+
+    }
+    .ridus{
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        background-color: rgb(238, 131, 0);
+        float: left;
+    }
+    </style>
+</head>
+<body>
+    <div class="top"><h1>hello</h1></div>  
+     <button type="button" onclick="ff()">请点击我</button>
+    <div class="c1"><h2>world!!</h2></div>
+    <button onclick="my()">变色</button>
+    <div class="ridus">
+
+    </div>
+ 
+</body>
+</html>
