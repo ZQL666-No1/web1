@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器</title>
+    <style>
+       .boxda{
+           float: left;
+       }
+        .grandfather{
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+        .parent1{
+            width: 200px;
+            height: 200px;
+           background-color: aqua;
+
+        }
+        .son{
+            width: 100px;height: 100px;
+            background-color: bisque;
+        }
+        .parent2{
+            width: 200px;height: 200px;
+
+            background-color:chartreuse;
+
+        }
+        .son2{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(20, 7, 7);
+        }
+        .parent2 .son2{
+            border: 10px solid white;
+        }
+        .grandfather .parent1 .son{
+            border: 10px solid  burlywood;
+        }
+        .box{
+            width: 400px;
+            height: 400px;
+            border: 10px dashed blue;
+            float: right;
+        }
+         .box1  span{
+            color: deeppink;
+        } 
+       
+       /* .box p{
+            color: gold;
+        } */
+        /* .box h1{
+            color:red;
+        } */
+        /* 后代选择器 */
+        /* h1 strong{
+              color:red;
+        } */
+         /* .box1>h1{
+            color: yellow;
+        } */
+    </style>
+</head>
+<body>
+    <div class="boxda">
+    <div class="grandfather">
+        <div class="parent1">
+            <div class="son"></div>
+        </div>
+        <div class="parent2">
+            <div class="son2"></div>
+        </div>
+    </div></div>
+    <div class="box">
+        <div class="box1">
+            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit<strong>. Fuga aperiam </strong> neque molestiae <strong>deserunt ex atq</strong> ue error perferendis, quasi vel eveniet nostrum laudantium ducimus molestias nam, veritatis veniam eum pariatur nulla.</h1>
+            <h1>hello world!!!</h1>
+            <span>江西软件职业技术大学</span>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sit ullam unde! Quos pariatur praesentium aliquam! Maiores quo itaque culpa rerum ipsa ea quae, amet, voluptates, saepe rem impedit voluptatem?</span>
+        </div>
+        <div class="box2">
+            <p>hello world!!!</p>
+        </div>
+        <!-- <p>jjj
+<h1>hello world!!!</h1>
+<h1>江西软件职业技术大学</h1></p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque consequatur vitae animi labore aut? Necessitatibus, esse? Exercitationem, fugiat, facilis nemo ullam nostrum adipisci corrupti natus vel assumenda beatae delectus autem!</p> -->
+    </div>
+</body>
+</html>
