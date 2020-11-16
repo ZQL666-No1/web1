@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javaScript定时器</title>
     <style>
-        #dd{
+        #dd {
             width: 600px;
             height: 500px;
             background-color: #f00;
         }
     </style>
 </head>
+
 <body>
     <div id="dd">
     </div>
     <button id="btn">stop</button>
     <script>
-        function ff(){
-            var dd=document.getElementById("dd");
-            var r=Math.ceil(Math.random()*255);
-            var g=Math.ceil(Math.random()*255);
-            var b=Math.ceil(Math.random()*255);
-            dd.style.backgroundColor="rgb("+r+","+g+","+b+")";
+        function ff() {
+            var dd = document.getElementById("dd");
+            var r = Math.ceil(Math.random() * 255);
+            var g = Math.ceil(Math.random() * 255);
+            var b = Math.ceil(Math.random() * 255);
+            dd.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
         }
         //定时器
-         A=window.setInterval("ff()",1000);
-         document.getElementById("btn").addEventListener("click",function(){
+        A = window.setInterval("ff()", 10000);
+        document.getElementById("btn").addEventListener("click", function () {
             window.clearInterval(A);
-         })
+        })
     </script>
 </body>
+
 </html>
