@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery入口函数</title>
+    <script src="jquery-3.5.1.slim.js"></script>
+    <script>
+        //jquery入口函数（DOM文档加载完成后，执行该函数中的代码）
+        // 格式如下：
+        //$(document).ready(function(){
+        //     函数代码
+        // });
+        $(document).ready(function () {
+            $("#b").click(function () {
+                $("#ab p").html("lihua");
+                $("#ab h1").html("hello world");
+                $("#a1").addClass("li");
+                // $("#a1").removeClass("li");
+                $("li p").html("htmlhahha");
+
+            });
+            $("#c").click(function () {
+                $("#ab").hide();
+            });
+            $("#d").click(function () {
+                $("#ab").show();
+            });
+            $("#e").click(function () {
+                $("#a1").hide();
+            });
+            $("#f").click(function () {
+                $("#a1").show();
+                $("#a1 h1").html("我显示了");
+            });
+            $("#m").click(function () {
+                $("#a1").toggle();
+                $("a1 h1").html("show");
+            });
+        });
+
+    </script>
+    <style>
+        #ab {
+            background-color: gold;
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .li {
+            background-color: red;
+            width: 300px;
+            height: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ab">
+        <h1></h1>
+        <p>123</p>
+    </div>
+    <div id="a1">
+        <p></p>
+        <h1></h1>
+    </div>
+    <button id="b" type="button">
+        btn
+    </button>
+    <button id="c">
+        hide
+    </button>
+    <button id="d">show</button>
+    <button id="e">hide red block</button>
+    <button id="f">show red block</button>
+    <button id="m">toggle</button>
+
+</body>
+
+</html>

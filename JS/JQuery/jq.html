@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.slim.js"></script>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: beige;
+        }
+
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">loremque
+        soluta.</div>
+    <div id="box1">aa</div>
+
+    <script>
+        var divs = document.getElementsByTagName("div");
+        // alert("js" + divs.length);
+        //JScript 改变元素内容
+        for (var i = 0; i < divs.length; i++) {
+            // divs[i].innerHTML = "aaa";
+            // $(divs).html("eee");
+        }
+        //将js对象转换成jQuery对象
+        // js-->jq  $(js对象)
+        // jq-->js     jq对象[索引] or jq对象.get(索引)
+
+
+        var $divs = $("div");
+        $divs.mousedown(function () {
+            $divs.html("你好哦哦哦");
+        });
+        $divs.mouseup(function () {
+            divs[0].innerHTML = "这是通过js对象调用的函数";
+        });
+
+        // alert("jquery" + $divs.length);
+        // $divs.get(1).innerHTML = "老夫";
+        // $divs[0].innerHTML = "力哈";
+        //JQuery 改变元素内容
+        // $divs.html("bbb");
+
+    </script>
+</body>
+
+</html>

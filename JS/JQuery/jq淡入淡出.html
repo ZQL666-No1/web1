@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ淡入淡出</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#ab").click(function () {
+                $("#box").fadeIn(1000);
+            });
+
+            $("#bc").click(function () {
+                $("#box").fadeOut();
+            });
+            $("#dd").click(function () {
+                $("#box").fadeToggle();
+            });
+            $("#hide").click(function () {
+                $("#box").hide();
+            });
+            $("#show").click(function () {
+                $("#box").show();
+            });
+            $("#up").click(function () {
+                $("#box3").slideUp();
+            });
+            $("#down").click(function () {
+                $("#box3").slideDown();
+            });
+        });
+    </script>
+    <style>
+        .box1 {
+            /* display: none; */
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            border: 2px solid gold;
+            display: inline-block;
+        }
+
+        .box2 {
+            width: 500px;
+            height: 500px;
+            background-color: chartreuse;
+            border: 5px dashed blue;
+            display: inline-block;
+
+        }
+
+        .cc {
+            background-color: aliceblue;
+            width: 300px;
+            height: 10px;
+
+        }
+
+        img {
+            width: 400px;
+            height: 400px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1" id="box"></div>
+    <div id="box3" class="box2"></div>
+    <div class="cc"></div>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <button id="ab">fade in</button>
+    <button id="bc">fade out</button>
+    <button id="dd">fadeToggle</button>
+    <button id="up">slipup</button>
+    <button id="down">slipdown</button>
+</body>
+
+</html>
