@@ -11,6 +11,8 @@
         $(document).ready(function () {
             $("#ab").click(function () {
                 $("#box").fadeIn(1000);
+                //给定参数不透明度
+                $("#box").fadeTo("slow", 0.7);
             });
 
             $("#bc").click(function () {
@@ -30,6 +32,9 @@
             });
             $("#down").click(function () {
                 $("#box3").slideDown();
+            });
+            $("#toggle").click(function () {
+                $("#box3").slideToggle()
             });
         });
     </script>
@@ -76,8 +81,9 @@
     <button id="ab">fade in</button>
     <button id="bc">fade out</button>
     <button id="dd">fadeToggle</button>
-    <button id="up">slipup</button>
-    <button id="down">slipdown</button>
+    <button id="up">slideUp</button>
+    <button id="down">slideDown</button>
+    <button id="toggle">slideToggle</button>
 </body>
 
 </html>

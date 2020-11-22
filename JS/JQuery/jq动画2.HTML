@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery-动画</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $(".box").slideUp(4000).css("fontSize", '3em').css("color", "green").css("width", '800px').css("heigth", '400px').slideDown(2000);
+            });
+        });
+
+    </script>
+    <style>
+        .box {
+            display: none;
+            background-color: gold;
+            color: aqua;
+            width: 400px;
+            height: 90px;
+            border: 4px solid red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">btn</button>
+    <div class="box">hello world</div>
+</body>
+
+</html>

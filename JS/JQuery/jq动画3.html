@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery.color.min.js"></script>
+    <!-- <script src="jquery.color.svg-names.min.js"></script>
+    <script src="jquery.color.plus-names.min.js"></script>
+    <script src="Gruntfile.js"></script>
+
+    <script src="release.js"></script> -->
+    <script>
+        //JQuuery 动态改变背景颜色时要插件
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $(".box").animate({
+                    left: '+=300',
+                    backgroundColor: 'black',
+                    //动态改变背景颜色
+                }, 2000, function () {
+                    $(".box").css("color", "white").css("fontSize", "4em").css("backgroung", 'blue');
+                });
+            });
+        });
+    </script>
+    <style>
+        .box {
+            border: 5px dashed blue;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">button</button>
+    <div class="box">
+        JQuery
+    </div>
+
+</body>
+
+</html>
