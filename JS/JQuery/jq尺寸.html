@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                var tx1 = $(".div").width();
+                var tx2 = $(".div").height();
+                var tx3 = $(".div").innerHeight();
+                var tx4 = $(".div").innerWidth();
+                var tx5 = $(".div").outerHeight();
+                var tx6 = $(".div").outerWidth();
+                $(".div").html("width:" + tx1 + "</br>" + "height:" + tx2 + "</br>" + "innerHeight:" + tx3 + "</br>" + "innerWidth:" + tx4 + "</br>" + "outerHeight:" + tx5 + "</br>" + "outerWidth:" + tx6);
+            });
+            $("#btn2").click(function () {
+                $(".div").width(500).height(500);
+            });
+            $("#btn3").click(function () {
+                $("#abc").removeClass("div");
+                $("#abc").addClass("div2 red");
+            });
+        });
+
+
+    </script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .red {
+            background-color: red;
+            font-size: 2em;
+        }
+
+        .div2 {
+            width: 400px;
+            height: 400px;
+            padding: 10px;
+            margin: 5px;
+            border: 10px blue dashed;
+        }
+
+        .div {
+            background-color: gold;
+            width: 200px;
+            height: 200px;
+            font-size: 1.5em;
+            padding: 10px;
+            margin: 5px;
+            border: 10px blue dashed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div" id="abc">
+        <h3>尺寸</h3>
+    </div>
+    <button id="btn1">获得尺寸</button>
+    <button id="btn2">改变尺寸</button>
+    <button id="btn3">addClass</button>
+</body>
+
+</html>
