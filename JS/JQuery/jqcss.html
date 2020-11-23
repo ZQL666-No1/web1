@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#we").removeClass("box");
+                $("#we").addClass("box1 blue");
+            });
+            $("#btn1").click(function () {
+                $("#we").removeClass("box1 blue");
+                $("#we").addClass("box  red");
+            });
+            $("#btn2").click(function () {
+                $("h2, p").toggleClass("gold");
+            });
+            $("#btn3").click(function () {
+                //获取对应元素的属性值
+                var x = $("div").css("background-color");
+                var y = $("p").css("background-color");
+                alert("hrlll" + x + y);
+            })
+            $("#btn4").click(function () {
+                //对多个属性进行修改
+                $("div").css({ "background-color": "white", "font-size": "1em", "border-color": "black" });
+            });
+        });
+
+    </script>
+    <style>
+        .box1 {
+            background-color: gold;
+            width: 300px;
+            height: 300px;
+            font-size: 2em;
+
+        }
+
+        .gold {
+            color: gold;
+            font-size: 2em;
+            line-height: 19px;
+        }
+
+        .blue {
+            color: blue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .red {
+            color: red;
+            font-weight: 400;
+        }
+
+        .box {
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            font-size: 1em;
+            border: 5px dashed red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="we" class="box">
+        <h2>123</h2>
+        <p>中国</p>
+    </div>
+    <button id="btn">按钮</button>
+    <button id="btn1">按钮</button>
+    <button id="btn2">按钮</button>
+    <button id="btn3">按钮</button>
+    <button id="btn4">按钮</button>
+</body>
+
+</html>
