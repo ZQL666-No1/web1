@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="jquery.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery.color.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                var s = $("#s").text();
+                var m = $("#s1").html();
+                var n = $("#s2").val();
+
+                alert(s + "===" + m + "===" + n);
+                $("#s").text("new p");
+                $("#s1").html("new span");
+                $("#s2").val("李华");
+            });
+            $("#btn2").click(function () {
+                $(".box").animate({
+
+                    left: "+=200px",
+                    backgroundColor: 'yellow',
+                });
+
+            });
+            $("#btn3").click(function () {
+                $(".box").animate({
+
+                    left: "-=200px",
+                    backgroundColor: 'green',
+                });
+
+            });
+            $("#btn4").click(function () {
+                var url = $("a").attr("href");
+                window.location.href = url;
+            });
+            $("#btn5").click(function () {
+                //替换链接
+                $("a").attr("href", "test.html");
+            });
+            $("#btn6").click(function () {
+                $("#box").css("color", "red");
+            });
+            $("#btn7").click(function () {
+                $("#box").removeattr("color", "red");
+            });
+        });
+    </script>
+    <style>
+        .box {
+            background-color: gold;
+            width: 300px;
+            height: 300px;
+            color: antiquewhite;
+            border: 5px dashed blue;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos magni eligendi quisquam ut minus doloribus
+        impedit ab quasi totam et quos natus quod error labore nobis repellat, maxime dolores iure?</p>
+    <span id="s1">
+        hello
+    </span>
+    <input type="text" id="s2" value="hello world">
+
+
+    <button id="btn">按钮(获取元素内容)</button>
+    <a href="http://www.baidu.com" id="dd">百度</a>
+    <div class="box" id="box">hello world</div>
+    <button id="btn2">按钮2</button>
+    <button id="btn3">按钮3</button>
+    <button id="btn4">按钮4</button>
+    <button id="btn5">按钮5</button>
+    <button id="btn6">按钮6</button>
+    <button id="btn7">按钮7</button>
+</body>
+
+</html>
