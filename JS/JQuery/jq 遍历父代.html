@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1 {
+            width: 500px;
+            height: 500px;
+            background-color: gold;
+            border: 5px solid black;
+
+        }
+
+        .d2 {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+
+        .d3 {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+
+        .d4 {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+        }
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("span").parent().css({ "color": "white", "backgroundColor": "gold" });
+            });
+            $("#btn2").click(function () {
+                $("span").parents().css({ "color": "white", "fontSize": "16px", "border": "2px solid red" });
+            });
+            $("#btn3").click(function () {
+                //  span与.d1之间的
+                $("span").parentsUntil(".d1").css({ "color": "pink", "backgroundColor": "blue", "border": "7px dashed grey" });
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <div class="d1">d1
+        <div class="d2">d2
+            <div class="d3" id="d3">
+                <span>123</span>
+                <div class="d4">
+                    d4
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="btn1">span的直接父元素</button>
+    <button id="btn2">span的所有父元素</button>
+    <button id="btn3">span的限定父元素</button>
+
+</body>
+
+</html>
