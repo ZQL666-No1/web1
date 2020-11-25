@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 600px;
+            height: 300px;
+            border: 2px solid black;
+        }
+
+        #g1 {
+            width: 600px;
+            height: 50px;
+            background-color: red;
+        }
+
+        #g2 {
+            width: 600px;
+            height: 50px;
+            background-color: blue;
+        }
+
+        #g3 {
+            width: 600px;
+            height: 50px;
+            background-color: lightgray;
+        }
+
+        #g4 {
+            width: 600px;
+            height: 50px;
+            background-color: yellow;
+        }
+
+        #g5 {
+            width: 600px;
+            height: 50px;
+            background-color: green;
+        }
+
+        #g6 {
+            width: 600px;
+            height: 50px;
+            background-color: gold;
+        }
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#btn").click(function () {
+                $(".box").children().first().html("first");
+            });
+            $("#btn1").click(function () {
+                $("div").last().css({ "color": "red", "fontSize": "2em" }).html("last");
+            });
+            $("#btn2").click(function () {
+                $(".box").children().filter(".box1").html("hello666");
+            });
+            $("#btn3").click(function () {
+                $(".box").children().not(".box1").html("not()方法");
+            });
+            $("#btn4").click(function () {
+                $("div").eq(2).html("我是第三个div").css("backgroundColor", "gold");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <div id="g1">1</div>
+        <div id="g2">2</div>
+        <div id="g3">3</div>
+        <div id="g4" class="box1">4</div>
+        <div id="g5" class="box1">5</div>
+        <div id="g6">6</div>
+
+    </div>
+    <button id="btn">过滤first</button>
+    <button id="btn1">过滤last</button>
+    <button id="btn2">过滤filter</button>
+    <button id="btn3">过滤not</button>
+    <button id="btn4">过滤eq</button>
+</body>
+
+</html>
